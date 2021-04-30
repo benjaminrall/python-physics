@@ -2,7 +2,7 @@ from vector import Vector
 
 class Rigidbody:
 
-    gravity = 9.8 / 120
+    gravity = 9.8 / 1
 
     def __init__(self, obj, mass, collider):
         self.mass = mass

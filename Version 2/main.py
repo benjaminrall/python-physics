@@ -36,9 +36,11 @@ if __name__ == '__main__':
                 exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
-                    pass
+                    objects.append(Box((-50, -600), (100, 100), 10, (255, 255, 255)))
+                    
+        objects.append(Box((random.randrange(-400, 401), -400), (10, 10), 10, (255, 255, 255)))
 
-        win.fill((0, 0, 0))
+        win.fill((30, 160, 235))
         for obj in objects:
             obj.draw(cam)
             obj.update()
