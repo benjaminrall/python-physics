@@ -1,7 +1,8 @@
 import pygame
 import math
+import random
 import os
-from physics_object import Object
+from physics_object import *
 from camera import Camera
 
 # Constants
@@ -19,6 +20,8 @@ clock = pygame.time.Clock()
 
 # Objects
 cam = Camera(win, 0, 0, 1)
+objects = []
+
 
 # Variables
 running = True
@@ -31,9 +34,16 @@ if __name__ == '__main__':
                 running = False
                 pygame.quit()
                 exit()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                if event.button == 1:
+                    objects.append(Box((random.randrange(-400, 400), -400), (random.randrange(5, 151), (random.randrange(5, 151))), 10, (255 * random.randrange(1, 255) / 255, 255 * random.randrange(1, 255) / 255, 255 * random.randrange(1, 255) / 255)))
 
         win.fill((0, 0, 0))
-        cam.draw_rect((-0.5, -0.5, 1, 1), (255, 255, 255))
+        for obj in objects:
+            obj.draw(cam)
+            obj.update()
         pygame.display.update()
+
+        print(len(objects))
 
         clock.tick(FRAMERATE)
