@@ -1,3 +1,3 @@
 import pygame
-
-f = 0
+import math
+from physics_object import Object
