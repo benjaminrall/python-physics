@@ -21,6 +21,6 @@ class Box(Object):
         self.dimensions = dimensions
 
     def draw(self, cam):
-        cam.DrawRect((self.pos.x, self.pos.y, self.dimensions[0], self.dimensions[1]), self.colour)
+        return cam.DrawRect((self.pos.x, self.pos.y, self.dimensions[0], self.dimensions[1]), self.colour)
     
     

@@ -1,12 +1,12 @@
 from os import stat
-
+import math
 
 class Vector:
     def __init__(self, x, y):
         self.x = x
         self.y = y
         self.vector = (x, y)
-        self.magnitude =  ((x ** 2) + (y ** 2)) ** 0.5
+        self.magnitude =  math.sqrt((x ** 2) + (y ** 2))
 
     @staticmethod
     def Add(v1, v2):
@@ -19,3 +19,7 @@ class Vector:
     @staticmethod
     def Dot(v1, v2):
         return sum([i[0] * i[1] for i in zip(v1.vector, v2.vector)])
+
+    @staticmethod
+    def Unit(v):
+        return Vector(v.x / v.magnitude, v.y / v.magnitude)
