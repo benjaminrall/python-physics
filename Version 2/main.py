@@ -36,7 +36,7 @@ if __name__ == '__main__':
                 exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
-                    objects.append(Box((random.randrange(-400, 400), -400), (random.randrange(5, 151), (random.randrange(5, 151))), 10, (255 * random.randrange(1, 255) / 255, 255 * random.randrange(1, 255) / 255, 255 * random.randrange(1, 255) / 255)))
+                    pass
 
         win.fill((0, 0, 0))
         for obj in objects:
