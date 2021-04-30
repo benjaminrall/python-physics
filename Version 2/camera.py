@@ -1,7 +1,6 @@
 import pygame
 
 class Camera:
-
     def __init__(self, win, x, y, zoom):
         self.zoom = zoom
         self.win = win
@@ -15,8 +14,6 @@ class Camera:
     def DrawRect(self, rect, colour):
         if self.RectInBounds(rect):
             pygame.draw.rect(self.win, colour, self.GetScreenRect(rect))
-            return True
-        return False
 
     def RectInBounds(self, rect):
         return (rect[0] <= self.x + (self.width / 2)) and (rect[0] + rect[2] >= self.x - (self.width / 2)) and (rect[1] + rect[3] >= self.y - (self.height / 2)) and (rect[1] <= self.y + (self.height / 2))
