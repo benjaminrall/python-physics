@@ -1,4 +1,3 @@
-from os import stat
 import math
 
 class Vector:
@@ -6,7 +5,7 @@ class Vector:
         self.x = x
         self.y = y
         self.vector = (x, y)
-        self.magnitude =  math.sqrt((x ** 2) + (y ** 2))
+        self.magnitude =  math.hypot(x, y)
 
     @staticmethod
     def Add(v1, v2):
