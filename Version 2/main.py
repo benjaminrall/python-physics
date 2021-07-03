@@ -11,7 +11,6 @@ FRAMERATE = 120
 ICON_IMG = pygame.image.load(os.path.join("imgs", "icon.png"))
 
 # Pygame Setup
-pygame.init()
 win = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
 pygame.display.set_caption("Python Physics")
 pygame.display.set_icon(ICON_IMG)

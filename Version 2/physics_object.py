@@ -1,4 +1,4 @@
-from rigibody import Rigidbody
+from rigidbody import Rigidbody
 from vector import Vector
 
 class Object:
